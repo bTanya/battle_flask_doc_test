@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<div id="result">
+    {% if title %}
+    <h2>{{title}}</h2>
+    {% else %}
+    <h2>BattleFild</h2>
+    {% endif %}
+    {% if win == '0' %}
+    <h2>Введено неверное количество.</h2>
+    {% elif win == 'error' %}
+    <h2>Err!</h2>
+    {% else %}
+    <h2>Выиграла армия: {{win}}</h2>
+    {% endif %}
+    <a href="/">Restart</a>
+</div>
+{% endblock %}
