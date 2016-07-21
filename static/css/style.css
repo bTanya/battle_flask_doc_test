@@ -1,0 +1,44 @@
+body{
+    background-color: #333941
+}
+#game{
+    text-align: justify;
+    color: #fff;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    margin-top: -180px;
+    margin-left: -230px;
+    background-color: rgba(81, 96, 113, 0.8);
+    padding-bottom: 30px;
+    border: 1px solid #313945;
+}
+#result{
+    text-align: justify;
+    color: #fff;
+    position: absolute;
+    padding-bottom: 30px;
+    border: 1px solid #313945;
+}
+input[type='text'], #strategy{
+    font-family: Arial;
+    margin-bottom: 20px;
+    padding: 5px 10px;
+    font-size: 13px;
+
+}
+#start{
+    width: 367px;
+    height: 35px;
+    border: none;
+    background-color: #7389A2;
+    color: #fff;
+    cursor: pointer;
+    font-size: 13px;
+}
+#start:hover{
+    background-color: #4B5968;
+}
+a{
+    color: #fff;
+}
