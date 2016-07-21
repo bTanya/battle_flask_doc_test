@@ -1,0 +1,467 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>app package &mdash; flask 1.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="flask 1.1 documentation" href="index.html" />
+    <link rel="prev" title="Welcome to flask’s documentation!" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="app-package">
+<h1>app package<a class="headerlink" href="#app-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-app.Army">
+<span id="app-army-module"></span><h2>app.Army module<a class="headerlink" href="#module-app.Army" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="app.Army.Army">
+<em class="property">class </em><code class="descclassname">app.Army.</code><code class="descname">Army</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#app.Army.Army" title="Permalink to this definition">¶</a></dt>
+<dd><p>Association Squard in the army with specific characteristics:</p>
+<dl class="method">
+<dt id="app.Army.Army.attack">
+<code class="descname">attack</code><span class="sig-paren">(</span><em>army</em>, <em>strategy_</em><span class="sig-paren">)</span><a class="headerlink" href="#app.Army.Army.attack" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="app.Army.Army.get_health">
+<code class="descname">get_health</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.Army.Army.get_health" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="app.Army.Army.get_name">
+<code class="descname">get_name</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.Army.Army.get_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="app.Army.Army.get_squads">
+<code class="descname">get_squads</code><a class="headerlink" href="#app.Army.Army.get_squads" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="staticmethod">
+<dt id="app.Army.Army.take_damage">
+<em class="property">static </em><code class="descname">take_damage</code><span class="sig-paren">(</span><em>damage</em>, <em>strategy_name</em>, <em>army</em><span class="sig-paren">)</span><a class="headerlink" href="#app.Army.Army.take_damage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Take damage army depending on the chosen strategy
+:param damage: damage
+:param strategy_name: How strategy chosen
+:param army: army which will be attacked
+:return: squad which attacked</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-app.AttackStrategy">
+<span id="app-attackstrategy-module"></span><h2>app.AttackStrategy module<a class="headerlink" href="#module-app.AttackStrategy" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="app.AttackStrategy.AttackStrategy">
+<em class="property">class </em><code class="descclassname">app.AttackStrategy.</code><code class="descname">AttackStrategy</code><a class="headerlink" href="#app.AttackStrategy.AttackStrategy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Each time a squad attacks it must choose a target squad, depending on the chosen strategy.</p>
+<dl class="method">
+<dt id="app.AttackStrategy.AttackStrategy.select_squad">
+<code class="descname">select_squad</code><span class="sig-paren">(</span><em>army</em><span class="sig-paren">)</span><a class="headerlink" href="#app.AttackStrategy.AttackStrategy.select_squad" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="app.AttackStrategy.Random">
+<em class="property">class </em><code class="descclassname">app.AttackStrategy.</code><code class="descname">Random</code><a class="headerlink" href="#app.AttackStrategy.Random" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#app.AttackStrategy.AttackStrategy" title="app.AttackStrategy.AttackStrategy"><code class="xref py py-class docutils literal"><span class="pre">app.AttackStrategy.AttackStrategy</span></code></a></p>
+<p>Each time a squad attacks it must choose a target squad, depending on the chosen strategy random</p>
+<dl class="method">
+<dt id="app.AttackStrategy.Random.select_squad">
+<code class="descname">select_squad</code><span class="sig-paren">(</span><em>army</em><span class="sig-paren">)</span><a class="headerlink" href="#app.AttackStrategy.Random.select_squad" title="Permalink to this definition">¶</a></dt>
+<dd><p>attack any random squad
+:param army: chose army which will attack
+:return: (int) number squads which will be attacked</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="app.AttackStrategy.Strongest">
+<em class="property">class </em><code class="descclassname">app.AttackStrategy.</code><code class="descname">Strongest</code><a class="headerlink" href="#app.AttackStrategy.Strongest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#app.AttackStrategy.AttackStrategy" title="app.AttackStrategy.AttackStrategy"><code class="xref py py-class docutils literal"><span class="pre">app.AttackStrategy.AttackStrategy</span></code></a></p>
+<p>Each time a squad attacks it must choose a target squad, depending on the chosen strategy strongest</p>
+<dl class="method">
+<dt id="app.AttackStrategy.Strongest.select_squad">
+<code class="descname">select_squad</code><span class="sig-paren">(</span><em>army</em><span class="sig-paren">)</span><a class="headerlink" href="#app.AttackStrategy.Strongest.select_squad" title="Permalink to this definition">¶</a></dt>
+<dd><p>attack the strongest opposing squad
+:param army: chose army which will attack
+:return: (int) number squads which will be attacked</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="app.AttackStrategy.Weakest">
+<em class="property">class </em><code class="descclassname">app.AttackStrategy.</code><code class="descname">Weakest</code><a class="headerlink" href="#app.AttackStrategy.Weakest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#app.AttackStrategy.AttackStrategy" title="app.AttackStrategy.AttackStrategy"><code class="xref py py-class docutils literal"><span class="pre">app.AttackStrategy.AttackStrategy</span></code></a></p>
+<p>Each time a squad attacks it must choose a target squad, depending on the chosen strategy weakest</p>
+<dl class="method">
+<dt id="app.AttackStrategy.Weakest.select_squad">
+<code class="descname">select_squad</code><span class="sig-paren">(</span><em>army</em><span class="sig-paren">)</span><a class="headerlink" href="#app.AttackStrategy.Weakest.select_squad" title="Permalink to this definition">¶</a></dt>
+<dd><p>attack the weakest opposing squad
+:param army: chose army which will attack
+:return: (int) number squads which will be attacked</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-app.BattleField">
+<span id="app-battlefield-module"></span><h2>app.BattleField module<a class="headerlink" href="#module-app.BattleField" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="app.BattleField.BattleField">
+<em class="property">class </em><code class="descclassname">app.BattleField.</code><code class="descname">BattleField</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#app.BattleField.BattleField" title="Permalink to this definition">¶</a></dt>
+<dd><p>The following constraints should be configurable:
+The number of armies: 2 &lt;= n
+The choice of attack strategy per army: random|weakest|strongest
+The number of squads per army: 2 &lt;= n
+The number of units per squad: 5 &lt;= n &lt;= 10</p>
+<dl class="method">
+<dt id="app.BattleField.BattleField.start">
+<code class="descname">start</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.BattleField.BattleField.start" title="Permalink to this definition">¶</a></dt>
+<dd><p>Configure the army with specified characteristics and start battle between army
+:return: number army which win</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-app.Squad">
+<span id="app-squad-module"></span><h2>app.Squad module<a class="headerlink" href="#module-app.Squad" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="app.Squad.Squad">
+<em class="property">class </em><code class="descclassname">app.Squad.</code><code class="descname">Squad</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#app.Squad.Squad" title="Permalink to this definition">¶</a></dt>
+<dd><p>Squads are consisted out of a number of units (soldiers or vehicles), that behave as a coherent group.
+A squad is active as long as is contains an active unit.</p>
+<dl class="attribute">
+<dt id="app.Squad.Squad.do_attack">
+<code class="descname">do_attack</code><a class="headerlink" href="#app.Squad.Squad.do_attack" title="Permalink to this definition">¶</a></dt>
+<dd><p>The attack success probability of a squad is determined
+as the average o the attack success probability of each member.
+:return:</p>
+<blockquote>
+<div>(int) the probability of attack success</div></blockquote>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="app.Squad.Squad.get_experience">
+<code class="descname">get_experience</code><a class="headerlink" href="#app.Squad.Squad.get_experience" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="app.Squad.Squad.get_health">
+<code class="descname">get_health</code><a class="headerlink" href="#app.Squad.Squad.get_health" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="app.Squad.Squad.take_damage">
+<code class="descname">take_damage</code><span class="sig-paren">(</span><em>damage</em><span class="sig-paren">)</span><a class="headerlink" href="#app.Squad.Squad.take_damage" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>The damage received on a successful attack is distributed evenly to all squad members.</dt>
+<dd>The damage inflicted on a successful attack is the accumulation of the damage inflicted by each squad member.</dd>
+</dl>
+<p>:param damage:how much damage can cause
+:return:change health after attack</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-app.Units">
+<span id="app-units-module"></span><h2>app.Units module<a class="headerlink" href="#module-app.Units" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="app.Units.Solder">
+<em class="property">class </em><code class="descclassname">app.Units.</code><code class="descname">Solder</code><a class="headerlink" href="#app.Units.Solder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#app.Units.Unit" title="app.Units.Unit"><code class="xref py py-class docutils literal"><span class="pre">app.Units.Unit</span></code></a></p>
+<p>Soldiers are units that have an additional property:experience
+The experience property is incremented after each successful attack,
+and is sed to calculate the attack success probability and the amount of damage inflicted
+Soldiers are considered active as long as they have any health.</p>
+<dl class="attribute">
+<dt id="app.Units.Solder.do_attack">
+<code class="descname">do_attack</code><a class="headerlink" href="#app.Units.Solder.do_attack" title="Permalink to this definition">¶</a></dt>
+<dd><p>Soldiers attack success probability is calculated:
+0.5 * (1 + health/100) * random(50 + experience, 100) / 100
+where random(min, max) returns a random number between min and max (inclusive)
+:return</p>
+<blockquote>
+<div>(int) how much damage Soldier can cause</div></blockquote>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="app.Units.Solder.get_experience">
+<code class="descname">get_experience</code><a class="headerlink" href="#app.Units.Solder.get_experience" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="app.Units.Solder.set_experience">
+<code class="descname">set_experience</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.Units.Solder.set_experience" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="app.Units.Solder.take_damage">
+<code class="descname">take_damage</code><span class="sig-paren">(</span><em>damage</em><span class="sig-paren">)</span><a class="headerlink" href="#app.Units.Solder.take_damage" title="Permalink to this definition">¶</a></dt>
+<dd><p>The amount of damage a soldier can afflict is calculated as follows:
+0.05 + experience / 100
+:param damage: how much damage Soldier can cause
+:return: change health after attack</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="app.Units.Unit">
+<em class="property">class </em><code class="descclassname">app.Units.</code><code class="descname">Unit</code><a class="headerlink" href="#app.Units.Unit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Each unit represents either a soldier or a vehicle maned by a predetermined number of soldiers.
+All units have the following properties:health and recharge
+:argument</p>
+<blockquote>
+<div>prev_time: stores time the last battle</div></blockquote>
+<dl class="method">
+<dt id="app.Units.Unit.check_attack">
+<code class="descname">check_attack</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.Units.Unit.check_attack" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks have enough time to recharge,using property recharge.
+Represents the number of ms required to recharge the unit for an attack
+:return</p>
+<blockquote>
+<div>True: if the attack will be carried out
+False: if the attack won`t be carried out</div></blockquote>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="app.Units.Unit.do_attack">
+<code class="descname">do_attack</code><a class="headerlink" href="#app.Units.Unit.do_attack" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="app.Units.Unit.get_experience">
+<code class="descname">get_experience</code><a class="headerlink" href="#app.Units.Unit.get_experience" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="app.Units.Unit.get_health">
+<code class="descname">get_health</code><a class="headerlink" href="#app.Units.Unit.get_health" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="app.Units.Unit.get_next_attack_time">
+<code class="descname">get_next_attack_time</code><a class="headerlink" href="#app.Units.Unit.get_next_attack_time" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="app.Units.Unit.get_recharge">
+<code class="descname">get_recharge</code><a class="headerlink" href="#app.Units.Unit.get_recharge" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="app.Units.Unit.prev_time">
+<code class="descname">prev_time</code><em class="property"> = None</em><a class="headerlink" href="#app.Units.Unit.prev_time" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="app.Units.Unit.set_health">
+<code class="descname">set_health</code><span class="sig-paren">(</span><em>health</em><span class="sig-paren">)</span><a class="headerlink" href="#app.Units.Unit.set_health" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="app.Units.Unit.set_next_attack_time">
+<code class="descname">set_next_attack_time</code><span class="sig-paren">(</span><em>next_attack_time</em><span class="sig-paren">)</span><a class="headerlink" href="#app.Units.Unit.set_next_attack_time" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="app.Units.Unit.set_recharge">
+<code class="descname">set_recharge</code><span class="sig-paren">(</span><em>recharge</em><span class="sig-paren">)</span><a class="headerlink" href="#app.Units.Unit.set_recharge" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="app.Units.Unit.take_damage">
+<code class="descname">take_damage</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span><a class="headerlink" href="#app.Units.Unit.take_damage" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="app.Units.Vehicles">
+<em class="property">class </em><code class="descclassname">app.Units.</code><code class="descname">Vehicles</code><a class="headerlink" href="#app.Units.Vehicles" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#app.Units.Unit" title="app.Units.Unit"><code class="xref py py-class docutils literal"><span class="pre">app.Units.Unit</span></code></a></p>
+<p>A battle vehicle has these additional properties:
+operators the number of soldiers required to operate the vehicle
+The recharge property for a vehicle must be greater than 1000 (ms).
+The total health of a vehicle unit is represented as the average health
+of all it&#8217;s operators and the health of the vehicle.
+A vehicle is considered active as long as it self has any health and there
+is an vehicle operator with any health.</p>
+<dl class="docutils">
+<dt>:attribute</dt>
+<dd>operators is dict Solder in [1,3]</dd>
+</dl>
+<dl class="staticmethod">
+<dt id="app.Units.Vehicles.alive">
+<em class="property">static </em><code class="descname">alive</code><span class="sig-paren">(</span><em>units</em><span class="sig-paren">)</span><a class="headerlink" href="#app.Units.Vehicles.alive" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check live the unit in vehicle
+:param units: one of the dict operators
+:return:</p>
+<blockquote>
+<div>True: if unit live
+False: if unit die</div></blockquote>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="app.Units.Vehicles.do_attack">
+<code class="descname">do_attack</code><a class="headerlink" href="#app.Units.Vehicles.do_attack" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Vehicle attack success probability is determined as follows:
+0.5 * (1 + vehicle.health / 100) * gavg(operators.attack_success)
+where gavg is the geometric average of the attack success of all the vehicle operators
+:return:</p>
+<blockquote>
+<div>(int) how much damage Vehicle can cause</div></blockquote>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="app.Units.Vehicles.get_experience">
+<code class="descname">get_experience</code><a class="headerlink" href="#app.Units.Vehicles.get_experience" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="app.Units.Vehicles.get_operators">
+<code class="descname">get_operators</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#app.Units.Vehicles.get_operators" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="app.Units.Vehicles.operators">
+<code class="descname">operators</code><em class="property"> = []</em><a class="headerlink" href="#app.Units.Vehicles.operators" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="app.Units.Vehicles.take_damage">
+<code class="descname">take_damage</code><span class="sig-paren">(</span><em>damage</em><span class="sig-paren">)</span><a class="headerlink" href="#app.Units.Vehicles.take_damage" title="Permalink to this definition">¶</a></dt>
+<dd><p>The damage afflicted by a vehicle is calculated:
+0.1 + sum(operators.experience / 100)
+The total damage inflicted on the vehicle is distributed to the operators as follows:
+60% of the total damage is inflicted on the vehicle
+20% of the total damage is inflicted on a random vehicle operator
+The rest of the damage is inflicted evenly to the other operators (10% each)
+:param</p>
+<blockquote>
+<div>damage:how much damage can cause</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">change health after attack for each unit in operators and vehicle</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-app">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-app" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">app package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-app.Army">app.Army module</a></li>
+<li><a class="reference internal" href="#module-app.AttackStrategy">app.AttackStrategy module</a></li>
+<li><a class="reference internal" href="#module-app.BattleField">app.BattleField module</a></li>
+<li><a class="reference internal" href="#module-app.Squad">app.Squad module</a></li>
+<li><a class="reference internal" href="#module-app.Units">app.Units module</a></li>
+<li><a class="reference internal" href="#module-app">Module contents</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Welcome to flask&#8217;s documentation!</a></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/app.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2016, Tnaya.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="_sources/app.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
